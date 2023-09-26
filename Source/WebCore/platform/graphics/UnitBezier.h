@@ -121,7 +121,7 @@ namespace WebCore {
                 if (x <= splineSamples[i]) {
                     t1 = deltaT * i;
                     t0 = t1 - deltaT;
-                    t2 = t0 + (t1 - t0) * (x - splineSamples[i - 1]) / (splineSamples[i] - splineSamples[i - 1]);
+                    t2 = t0 + deltaT * (x - splineSamples[i - 1]) / (splineSamples[i] - splineSamples[i - 1]);
                     break;
                 }
             }
